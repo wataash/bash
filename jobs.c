@@ -1917,6 +1917,7 @@ make_child (command, async_p)
   RESET_SIGTERM;
 
   /* Create the child, handle severe errors.  Retry on EAGAIN. */
+  // !
   while ((pid = fork ()) < 0 && errno == EAGAIN && forksleep < FORKSLEEP_MAX)
     {
       /* bash-4.2 */
